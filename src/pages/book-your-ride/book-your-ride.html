@@ -1,0 +1,105 @@
+<!--
+  Generated template for the BookYourRidePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Book Your Ride</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+<div padding>
+  <ion-segment [(ngModel)]="ride">
+    <ion-segment-button value="to">
+     To College
+    </ion-segment-button>
+    <ion-segment-button value="from">
+     From College
+    </ion-segment-button>
+  </ion-segment>
+</div>
+<div [ngSwitch]="ride">
+  <ion-list *ngSwitchCase="'to'">
+    <ion-card>
+      <ion-card-content>
+        <ion-item>
+          <ion-label>
+           <strong>From : </strong>Your Location
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <strong>To : </strong>Amity School Of Engineering & Technology, Bijwasan
+          </ion-label>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-card>
+          <ion-card-header text-center>UBER</ion-card-header>
+          <ion-card-content>
+            <ion-item>
+              <ion-label>Category</ion-label>
+              <ion-select [(ngModel)]="uberCategory" interface="action-sheet" (ionChange)="getFareUber()" > 
+                <ion-option value="pool">Pool</ion-option>
+                <ion-option value="go">GO</ion-option>
+                <ion-option value="premeir">PREMEIR</ion-option>
+                <ion-option value="xl">XL</ion-option>
+                <ion-option value="black">BLACK</ion-option>
+              </ion-select>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-row>
+      <ion-row *ngIf="uber">
+        <ion-card> 
+            <ion-card-content>
+              <ion-item>
+                <ion-thumbnail item-start>
+                  <img src="../assets/imgs/uber.jpg" alt="Uber">
+                </ion-thumbnail>
+                  <p><strong>Estimated Fare : </strong>{{uber.estimate}}</p> 
+                <p><strong>Estimted Duration : </strong>{{uber.duration}}</p>
+                <p><strong>Distance : </strong>{{uber.distance}}</p>
+                <button ion-button clear item-end (click)="openUberApp()">Book</button>
+              </ion-item>
+            </ion-card-content>
+          </ion-card>
+      </ion-row>
+        <ion-row>
+          <ion-card>
+            <ion-card-header text-center>OLA</ion-card-header>
+            <ion-card-content>
+              <ion-item>
+                <ion-label>Category</ion-label>
+                <ion-select [(ngModel)]="olaCategory" #C interface="action-sheet" (ionChange)="getFareOla(C.value)">  
+                  <ion-option value="share">Share</ion-option>
+                  <ion-option value="micro">MICRO</ion-option>
+                  <ion-option value="mini">MINI</ion-option>
+                  <ion-option value="prime">PRIME</ion-option>
+                </ion-select>
+              </ion-item>
+            </ion-card-content>
+          </ion-card>
+      </ion-row>
+    </ion-grid>
+    
+    
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'from'">
+    <ion-item>
+      <h2>Luna</h2>
+    </ion-item>
+  </ion-list>
+</div>
+</ion-content>

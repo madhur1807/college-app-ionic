@@ -1,0 +1,4 @@
+#Tue Jan 30 19:18:15 IST 2018
+base.0=C\:\\college-app-ionic\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+renamed.0=classes.dex
+file.0=C\:\\college-app-ionic\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex
