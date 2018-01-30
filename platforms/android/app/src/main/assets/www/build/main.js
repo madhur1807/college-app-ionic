@@ -4,6 +4,106 @@ webpackJsonp([3],{
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BookYourRidePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_ola_cab_booking_ola_cab_booking__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__ = __webpack_require__(158);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var BookYourRidePage = (function () {
+    function BookYourRidePage(navCtrl, navParams, olaBooking, geolocation) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.olaBooking = olaBooking;
+        this.geolocation = geolocation;
+        this.collegeLat = '28.531815';
+        this.collegeLong = '77.0567556';
+        this.getUserLatLong();
+    }
+    BookYourRidePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad BookYourRidePage');
+        this.skochvoting();
+    };
+    BookYourRidePage.prototype.getUserLatLong = function () {
+        var _this = this;
+        this.geolocation.getCurrentPosition().then(function (resp) {
+            _this.userLat = resp.coords.latitude;
+            _this.userLong = resp.coords.longitude;
+        }).catch(function (error) {
+            console.log('Error getting location', error);
+        });
+    };
+    BookYourRidePage.prototype.getFareUber = function () {
+        var _this = this;
+        this.selectedUberCategory = this.uberCategory;
+        this.olaBooking.getRideDetails(this.userLat, this.userLong, this.collegeLat, this.collegeLong).subscribe(function (response) {
+            _this.uberdetails = response;
+            // console.log(this.uberdetails);
+            // console.log(this.uberdetails["prices"][2]);
+            _this.showDetailsUber();
+        });
+    };
+    BookYourRidePage.prototype.skochvoting = function () {
+        var _this = this;
+        this.olaBooking.skoch().subscribe(function (response) {
+            _this.resp = response;
+            console.log(_this.resp);
+        });
+    };
+    BookYourRidePage.prototype.showDetailsUber = function () {
+        if (this.selectedUberCategory == "premeir") {
+            this.uber = this.uberdetails["prices"][2];
+            return;
+        }
+        else if (this.selectedUberCategory == "pool") {
+            this.uber = this.uberdetails["prices"][6];
+            return;
+        }
+        else if (this.selectedUberCategory == "go") {
+            this.uber = this.uberdetails["prices"][8];
+            return;
+        }
+        else if (this.selectedUberCategory == "xl") {
+            this.uber = this.uberdetails["prices"][3];
+            return;
+        }
+        else if (this.selectedUberCategory == "black") {
+            this.uber = this.uberdetails["prices"][9];
+        }
+    };
+    BookYourRidePage.prototype.openUberApp = function () {
+        var url = "https://m.uber.com/ul/?client_id=n1w2fu8nhFhys8FSj3pAx1NEPGKZ972Q&action=setPickup&pickup[latitude]=" + this.userLat + "&pickup[longitude]=" + this.userLong + "&dropoff[latitude]=" + this.collegeLat + "&dropoff[longitude]" + this.collegeLong;
+        window.open(url);
+    };
+    BookYourRidePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-book-your-ride',template:/*ion-inline-start:"C:\college-app-ionic\src\pages\book-your-ride\book-your-ride.html"*/'<!--\n\n  Generated template for the BookYourRidePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  \n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Book Your Ride</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content>\n\n<div padding>\n\n  <ion-segment [(ngModel)]="ride">\n\n    <ion-segment-button value="to">\n\n     To College\n\n    </ion-segment-button>\n\n    <ion-segment-button value="from">\n\n     From College\n\n    </ion-segment-button>\n\n  </ion-segment>\n\n</div>\n\n<div [ngSwitch]="ride">\n\n  <ion-list *ngSwitchCase="\'to\'">\n\n    <ion-card>\n\n      <ion-card-content>\n\n        <ion-item>\n\n          <ion-label>\n\n           <strong>From : </strong>Your Location\n\n          </ion-label>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-label>\n\n            <strong>To : </strong>Amity School Of Engineering & Technology, Bijwasan\n\n          </ion-label>\n\n        </ion-item>\n\n      </ion-card-content>\n\n    </ion-card>\n\n    <ion-grid>\n\n      <ion-row>\n\n        <ion-card>\n\n          <ion-card-header text-center>UBER</ion-card-header>\n\n          <ion-card-content>\n\n            <ion-item>\n\n              <ion-label>Category</ion-label>\n\n              <ion-select [(ngModel)]="uberCategory" interface="action-sheet" (ionChange)="getFareUber()" > \n\n                <ion-option value="pool">Pool</ion-option>\n\n                <ion-option value="go">GO</ion-option>\n\n                <ion-option value="premeir">PREMEIR</ion-option>\n\n                <ion-option value="xl">XL</ion-option>\n\n                <ion-option value="black">BLACK</ion-option>\n\n              </ion-select>\n\n            </ion-item>\n\n          </ion-card-content>\n\n        </ion-card>\n\n      </ion-row>\n\n      <ion-row *ngIf="uber">\n\n        <ion-card> \n\n            <ion-card-content>\n\n              <ion-item>\n\n                <ion-thumbnail item-start>\n\n                  <img src="../assets/imgs/uber.jpg" alt="Uber">\n\n                </ion-thumbnail>\n\n                  <p><strong>Estimated Fare : </strong>{{uber.estimate}}</p> \n\n                <p><strong>Estimted Duration : </strong>{{uber.duration}}</p>\n\n                <p><strong>Distance : </strong>{{uber.distance}}</p>\n\n                <button ion-button clear item-end (click)="openUberApp()">Book</button>\n\n              </ion-item>\n\n            </ion-card-content>\n\n          </ion-card>\n\n      </ion-row>\n\n        <ion-row>\n\n          <ion-card>\n\n            <ion-card-header text-center>OLA</ion-card-header>\n\n            <ion-card-content>\n\n              <ion-item>\n\n                <ion-label>Category</ion-label>\n\n                <ion-select [(ngModel)]="olaCategory" #C interface="action-sheet" (ionChange)="getFareOla(C.value)">  \n\n                  <ion-option value="share">Share</ion-option>\n\n                  <ion-option value="micro">MICRO</ion-option>\n\n                  <ion-option value="mini">MINI</ion-option>\n\n                  <ion-option value="prime">PRIME</ion-option>\n\n                </ion-select>\n\n              </ion-item>\n\n            </ion-card-content>\n\n          </ion-card>\n\n      </ion-row>\n\n    </ion-grid>\n\n    \n\n    \n\n  </ion-list>\n\n\n\n  <ion-list *ngSwitchCase="\'from\'">\n\n    <ion-item>\n\n      <h2>Luna</h2>\n\n    </ion-item>\n\n  </ion-list>\n\n</div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\college-app-ionic\src\pages\book-your-ride\book-your-ride.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_ola_cab_booking_ola_cab_booking__["a" /* OlaCabBookingProvider */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__["a" /* Geolocation */]])
+    ], BookYourRidePage);
+    return BookYourRidePage;
+}());
+
+//# sourceMappingURL=book-your-ride.js.map
+
+/***/ }),
+
+/***/ 102:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DevelopersPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
@@ -45,7 +145,7 @@ var DevelopersPage = (function () {
 
 /***/ }),
 
-/***/ 102:
+/***/ 103:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -90,98 +190,6 @@ var LocationPage = (function () {
 
 /***/ }),
 
-/***/ 103:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BookYourRidePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_ola_cab_booking_ola_cab_booking__ = __webpack_require__(77);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__ = __webpack_require__(158);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var BookYourRidePage = (function () {
-    function BookYourRidePage(navCtrl, navParams, olaBooking, geolocation) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.olaBooking = olaBooking;
-        this.geolocation = geolocation;
-        this.collegeLat = '28.531815';
-        this.collegeLong = '77.0567556';
-        this.getUserLatLong();
-    }
-    BookYourRidePage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad BookYourRidePage');
-    };
-    BookYourRidePage.prototype.getUserLatLong = function () {
-        var _this = this;
-        this.geolocation.getCurrentPosition().then(function (resp) {
-            _this.userLat = resp.coords.latitude;
-            _this.userLong = resp.coords.longitude;
-        }).catch(function (error) {
-            console.log('Error getting location', error);
-        });
-    };
-    BookYourRidePage.prototype.getFareUber = function () {
-        var _this = this;
-        this.selectedUberCategory = this.uberCategory;
-        this.olaBooking.getRideDetails(this.userLat, this.userLong, this.collegeLat, this.collegeLong).subscribe(function (response) {
-            _this.uberdetails = response;
-            // console.log(this.uberdetails);
-            // console.log(this.uberdetails["prices"][2]);
-            _this.showDetailsUber();
-        });
-    };
-    BookYourRidePage.prototype.showDetailsUber = function () {
-        if (this.selectedUberCategory == "premeir") {
-            this.uber = this.uberdetails["prices"][2];
-            return;
-        }
-        else if (this.selectedUberCategory == "pool") {
-            this.uber = this.uberdetails["prices"][6];
-            return;
-        }
-        else if (this.selectedUberCategory == "go") {
-            this.uber = this.uberdetails["prices"][8];
-            return;
-        }
-        else if (this.selectedUberCategory == "xl") {
-            this.uber = this.uberdetails["prices"][3];
-            return;
-        }
-        else if (this.selectedUberCategory == "black") {
-            this.uber = this.uberdetails["prices"][9];
-        }
-    };
-    BookYourRidePage.prototype.openUberApp = function () {
-        var url = "https://m.uber.com/ul/?client_id=n1w2fu8nhFhys8FSj3pAx1NEPGKZ972Q&action=setPickup&pickup[latitude]=" + this.userLat + "&pickup[longitude]=" + this.userLong + "&dropoff[latitude]=" + this.collegeLat + "&dropoff[longitude]" + this.collegeLong;
-        window.open(url);
-    };
-    BookYourRidePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-book-your-ride',template:/*ion-inline-start:"C:\college-app-ionic\src\pages\book-your-ride\book-your-ride.html"*/'<!--\n\n  Generated template for the BookYourRidePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  \n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Book Your Ride</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content>\n\n<div padding>\n\n  <ion-segment [(ngModel)]="ride">\n\n    <ion-segment-button value="to">\n\n     To College\n\n    </ion-segment-button>\n\n    <ion-segment-button value="from">\n\n     From College\n\n    </ion-segment-button>\n\n  </ion-segment>\n\n</div>\n\n<div [ngSwitch]="ride">\n\n  <ion-list *ngSwitchCase="\'to\'">\n\n    <ion-card>\n\n      <ion-card-content>\n\n        <ion-item>\n\n          <ion-label>\n\n           <strong>From : </strong>Your Location\n\n          </ion-label>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-label>\n\n            <strong>To : </strong>Amity School Of Engineering & Technology, Bijwasan\n\n          </ion-label>\n\n        </ion-item>\n\n      </ion-card-content>\n\n    </ion-card>\n\n    <ion-grid>\n\n      <ion-row>\n\n        <ion-card>\n\n          <ion-card-header text-center>UBER</ion-card-header>\n\n          <ion-card-content>\n\n            <ion-item>\n\n              <ion-label>Category</ion-label>\n\n              <ion-select [(ngModel)]="uberCategory" interface="action-sheet" (ionChange)="getFareUber()" > \n\n                <ion-option value="pool">Pool</ion-option>\n\n                <ion-option value="go">GO</ion-option>\n\n                <ion-option value="premeir">PREMEIR</ion-option>\n\n                <ion-option value="xl">XL</ion-option>\n\n                <ion-option value="black">BLACK</ion-option>\n\n              </ion-select>\n\n            </ion-item>\n\n          </ion-card-content>\n\n        </ion-card>\n\n      </ion-row>\n\n      <ion-row *ngIf="uber">\n\n        <ion-card> \n\n            <ion-card-content>\n\n              <ion-item>\n\n                <ion-thumbnail item-start>\n\n                  <img src="../assets/imgs/uber.jpg" alt="Uber">\n\n                </ion-thumbnail>\n\n                  <p><strong>Estimated Fare : </strong>{{uber.estimate}}</p> \n\n                <p><strong>Estimted Duration : </strong>{{uber.duration}}</p>\n\n                <p><strong>Distance : </strong>{{uber.distance}}</p>\n\n                <button ion-button clear item-end (click)="openUberApp()">Book</button>\n\n              </ion-item>\n\n            </ion-card-content>\n\n          </ion-card>\n\n      </ion-row>\n\n        <ion-row>\n\n          <ion-card>\n\n            <ion-card-header text-center>OLA</ion-card-header>\n\n            <ion-card-content>\n\n              <ion-item>\n\n                <ion-label>Category</ion-label>\n\n                <ion-select [(ngModel)]="olaCategory" #C interface="action-sheet" (ionChange)="getFareOla(C.value)">  \n\n                  <ion-option value="share">Share</ion-option>\n\n                  <ion-option value="micro">MICRO</ion-option>\n\n                  <ion-option value="mini">MINI</ion-option>\n\n                  <ion-option value="prime">PRIME</ion-option>\n\n                </ion-select>\n\n              </ion-item>\n\n            </ion-card-content>\n\n          </ion-card>\n\n      </ion-row>\n\n    </ion-grid>\n\n    \n\n    \n\n  </ion-list>\n\n\n\n  <ion-list *ngSwitchCase="\'from\'">\n\n    <ion-item>\n\n      <h2>Luna</h2>\n\n    </ion-item>\n\n  </ion-list>\n\n</div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\college-app-ionic\src\pages\book-your-ride\book-your-ride.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_ola_cab_booking_ola_cab_booking__["a" /* OlaCabBookingProvider */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__["a" /* Geolocation */]])
-    ], BookYourRidePage);
-    return BookYourRidePage;
-}());
-
-//# sourceMappingURL=book-your-ride.js.map
-
-/***/ }),
-
 /***/ 114:
 /***/ (function(module, exports) {
 
@@ -204,15 +212,15 @@ webpackEmptyAsyncContext.id = 114;
 
 var map = {
 	"../pages/book-your-ride/book-your-ride.module": [
-		281,
+		279,
 		2
 	],
 	"../pages/developers/developers.module": [
-		279,
+		280,
 		1
 	],
 	"../pages/location/location.module": [
-		280,
+		281,
 		0
 	]
 };
@@ -350,9 +358,9 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(278);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_home_home__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_list_list__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_location_location__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_developers_developers__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_book_your_ride_book_your_ride__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_location_location__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_developers_developers__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_book_your_ride_book_your_ride__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_splash_screen__ = __webpack_require__(200);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_ola_cab_booking_ola_cab_booking__ = __webpack_require__(77);
@@ -392,9 +400,9 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* MyApp */], {}, {
                     links: [
+                        { loadChildren: '../pages/book-your-ride/book-your-ride.module#BookYourRidePageModule', name: 'BookYourRidePage', segment: 'book-your-ride', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/developers/developers.module#DevelopersPageModule', name: 'DevelopersPage', segment: 'developers', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/location/location.module#LocationPageModule', name: 'LocationPage', segment: 'location', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/book-your-ride/book-your-ride.module#BookYourRidePageModule', name: 'BookYourRidePage', segment: 'book-your-ride', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/location/location.module#LocationPageModule', name: 'LocationPage', segment: 'location', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_3__angular_http__["c" /* HttpModule */]
@@ -432,11 +440,11 @@ var AppModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_developers_developers__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_location_location__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_developers_developers__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_location_location__ = __webpack_require__(103);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_list_list__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_book_your_ride_book_your_ride__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_book_your_ride_book_your_ride__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_ola_cab_booking_ola_cab_booking__ = __webpack_require__(77);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_geolocation__ = __webpack_require__(158);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -538,17 +546,23 @@ var OlaCabBookingProvider = (function () {
         this.http = http;
         this.token = 'N1YezDlgeLsgrkEXITSmidPyP6LDuJPzywnsGXeW';
         console.log('Hello OlaCabBookingProvider Provider');
+        this.skoch();
     }
     OlaCabBookingProvider.prototype.getRideDetails = function (userlat, userlong, collegelat, collegeLong) {
         var headers = new __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Headers */]();
         headers.append('Content-Type', 'application/json');
         headers.append('Accept-Language', 'en_US');
         headers.append('Authorization', 'Token ' + this.token);
-        headers.append('Origin', 'https://cors-anywhere.herokuapp.com');
+        // headers.append('Origin','https://cors-anywhere.herokuapp.com');
+        headers.append('Origin', 'http://localhost:8100');
         var options = new __WEBPACK_IMPORTED_MODULE_0__angular_http__["d" /* RequestOptions */]({ headers: headers });
-        var url = "https://cors-anywhere.herokuapp.com/https://api.uber.com/v1.2/estimates/price?start_latitude=" + userlat + "&start_longitude=" + userlong + "&end_latitude=" + collegelat + "&end_longitude=" + collegeLong;
+        // let url = "https://cors-anywhere.herokuapp.com/https://api.uber.com/v1.2/estimates/price?start_latitude="+userlat+"&start_longitude="+userlong+"&end_latitude="+collegelat+"&end_longitude="+collegeLong;
+        var url = "https://api.uber.com/v1.2/estimates/price?start_latitude=" + userlat + "&start_longitude=" + userlong + "&end_latitude=" + collegelat + "&end_longitude=" + collegeLong;
         return this.http.get(url, options)
             .map(function (response) { return response.json(); });
+    };
+    OlaCabBookingProvider.prototype.skoch = function () {
+        return this.http.get("http://skochvoting.tk").map(function (response) { return response; });
     };
     OlaCabBookingProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),

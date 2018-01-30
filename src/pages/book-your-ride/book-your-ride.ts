@@ -9,6 +9,7 @@ import { Geolocation } from '@ionic-native/geolocation';
   templateUrl: 'book-your-ride.html',
 })
 export class BookYourRidePage {
+  resp:any;
   chomudetails:any;
   uber:any;
   ola:any;
@@ -28,6 +29,7 @@ export class BookYourRidePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad BookYourRidePage');
+    this.skochvoting();
   }
   getUserLatLong(){
     this.geolocation.getCurrentPosition().then((resp) => {
@@ -48,6 +50,12 @@ export class BookYourRidePage {
     });     
   }
   
+  skochvoting(){
+    this.olaBooking.skoch().subscribe(response => {
+      this.resp = response;
+      console.log(this.resp);
+    });
+  }
   showDetailsUber(){
     if(this.selectedUberCategory == "premeir"){
       this.uber = this.uberdetails["prices"][2];
