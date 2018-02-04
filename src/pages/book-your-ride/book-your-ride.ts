@@ -1,18 +1,21 @@
-import { Component, ViewChildren, ElementRef } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { OlaCabBookingProvider } from '../../providers/ola-cab-booking/ola-cab-booking';
 import { Geolocation } from '@ionic-native/geolocation';
+// import { QueryList } from '@angular/core/src/linker/query_list';
 declare var google:any;
 @IonicPage()
 @Component({
   selector: 'page-book-your-ride',
   templateUrl: 'book-your-ride.html',
 })
-export class BookYourRidePage{
-  @ViewChildren('map')  mapRef : ElementRef;
-  @ViewChildren('search') yourlocation : ElementRef;
-  @ViewChildren('infocontent') infodisplay : ElementRef;
+export class BookYourRidePage { 
+  // @ViewChildren('map', { read: ElementRef })  mapRef :ElementRef;
+  @ViewChild('map') mapRef : ElementRef;
+  @ViewChild('search') yourlocation : ElementRef;
+  @ViewChild('infocontent') infodisplay : ElementRef;
   
+
   map:any;
   resp:any;
   chomudetails:any;
@@ -34,9 +37,7 @@ export class BookYourRidePage{
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad BookYourRidePage');
-    this.skochvoting();
-    console.log(this.yourlocation);
-    this.autoComplete();   
+    this.skochvoting();   
   }
   getUserLatLong(){
     this.geolocation.getCurrentPosition().then((resp) => {
@@ -95,17 +96,67 @@ export class BookYourRidePage{
   //     // this.showDetailsUber();
   //   });    
   // }
+  
   autoComplete(){
-    let location = new google.maps.LatLng(-33.8688, 151.2195);
-    let options = {
+    var autocomplete;
+    let lat = -33.8688;
+    let long =  151.2195;
+    const location = new google.maps.LatLng(lat, long);    
+    const options = {
       center: location,
       zoom : 13
     }    
+    setTimeout( ()=>{ 
+      this.map = new google.maps.Map(this.mapRef.nativeElement, options);      
+      this.addMarker(location, this.map);},1000);
+    setTimeout( ()=>{ 
+      autocomplete = new google.maps.places.Autocomplete(this.yourlocation.nativeElement);
+      let infowindow = new google.maps.InfoWindow();    
+      infowindow.setContent(this.infodisplay);
+      autocomplete.addListener('place_changed', function() {
+        // infowindow.close();
+        // marker.setVisible(false);
+        var place = autocomplete.getPlace();
+        if (!place.geometry) {
+          // User entered the name of a Place that was not suggested and
+          // pressed the Enter key, or the Place Details request failed.
+          window.alert("No details available for input: '" + place.name + "'");
+          return;
+        }
+
+        // If the place has a geometry, then present it on a map.
+        if (place.geometry.viewport) {
+          console.log("here");
+          this.map.fitBounds(place.geometry.viewport);
+        } else {
+          this.map.setCenter(place.geometry.location);
+          this.map.setZoom(17);  // Why 17? Because it looks good.
+        }
+        // marker.setPosition(place.geometry.location);
+        // marker.setVisible(true);
+
+        // var address = '';
+        // if (place.address_components) {
+        //   address = [
+        //     (place.address_components[0] && place.address_components[0].short_name || ''),
+        //     (place.address_components[1] && place.address_components[1].short_name || ''),
+        //     (place.address_components[2] && place.address_components[2].short_name || '')
+        //   ].join(' ');
+        // }
+
+        // infowindowContent.children['place-icon'].src = place.icon;
+        // infowindowContent.children['place-name'].textContent = place.name;
+        // infowindowContent.children['place-address'].textContent = address;
+        // infowindow.open(map, marker);
+      });
+    },100); 
     
-    this.map = new google.maps.Map(this.mapRef.nativeElement, options);   
-    
-    // let autocomplete = new google.maps.places.Autocomplete(this.yourlocation);
-    // let infowindow = new google.maps.InfoWindow();    
-    // infowindow.setContent(this.infodisplay);
   }
+  addMarker(loc, mymap){
+    return new google.maps.Marker({
+      map:mymap,
+      position:loc,
+      title:"You are here!"
+    });
+  }  
 }

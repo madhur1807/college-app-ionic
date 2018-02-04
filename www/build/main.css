@@ -25687,8 +25687,13 @@ page-book-your-ride #infowindow-content {
 }
 
 page-book-your-ride #map {
-  height: 100px;
+  height: 500px;
   width: 100%;
+}
+
+page-book-your-ride #placeInput {
+  width: 100%;
+  border: none;
 }
 
 .card-header-md + .card-content-md {
