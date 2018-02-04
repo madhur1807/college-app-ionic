@@ -1,5 +1,19 @@
 page-book-your-ride {
+    #infowindow-content .title {
+        font-weight: bold;
+      }
 
+      #infowindow-content {
+        display: block;
+      }
+
+    //   #map #infowindow-content {
+    //     display: inline;
+    //   }
+    #map{
+        height: 100px;
+        width: 100%;
+    }
 }
 .card-header-md + .card-content-md{
     border-top: 1px solid #ddd;

@@ -25678,6 +25678,19 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+page-book-your-ride #infowindow-content .title {
+  font-weight: bold;
+}
+
+page-book-your-ride #infowindow-content {
+  display: block;
+}
+
+page-book-your-ride #map {
+  height: 100px;
+  width: 100%;
+}
+
 .card-header-md + .card-content-md {
   border-top: 1px solid #ddd;
 }

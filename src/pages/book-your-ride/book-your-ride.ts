@@ -1,14 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { OlaCabBookingProvider } from '../../providers/ola-cab-booking/ola-cab-booking';
 import { Geolocation } from '@ionic-native/geolocation';
-
+declare var google:any;
 @IonicPage()
 @Component({
   selector: 'page-book-your-ride',
   templateUrl: 'book-your-ride.html',
 })
 export class BookYourRidePage {
+  @ViewChild('search') yourlocation : ElementRef;
+  @ViewChild('infocontent') infodisplay : ElementRef;
+  @ViewChild('map') mymap : ElementRef;
   resp:any;
   chomudetails:any;
   uber:any;
@@ -30,6 +33,7 @@ export class BookYourRidePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad BookYourRidePage');
     this.skochvoting();
+    this.autoComplete();
   }
   getUserLatLong(){
     this.geolocation.getCurrentPosition().then((resp) => {
@@ -88,4 +92,14 @@ export class BookYourRidePage {
   //     // this.showDetailsUber();
   //   });    
   // }
+  autoComplete(){
+    let location = new google.maps.LatLng( -33.8688, 151.2195);
+    this.mymap = new google.maps.Map(this.mymap.nativeElement, {
+      center:location,
+      zoom: 13
+    });
+    let autocomplete = new google.maps.places.Autocomplete(this.yourlocation);
+    let infowindow = new google.maps.InfoWindow();    
+    infowindow.setContent(this.infodisplay);
+  }
 }

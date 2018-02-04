@@ -98,7 +98,15 @@
 
   <ion-list *ngSwitchCase="'from'">
     <ion-item>
-      <h2>Luna</h2>
+      <ion-input #search type="text"></ion-input>
+    </ion-item>
+    <ion-item #infocontent id="infowindow-content">
+      <img src="" width="16" height="16" id="place-icon">
+      <span id="place-name"  class="title"></span><br>
+      <span id="place-address"></span>
+    </ion-item>
+    <ion-item>
+      <div #map id="map"></div>
     </ion-item>
   </ion-list>
 </div>

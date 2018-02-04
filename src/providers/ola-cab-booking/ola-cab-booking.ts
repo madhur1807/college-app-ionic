@@ -21,7 +21,7 @@ export class OlaCabBookingProvider {
     headers.append('Accept-Language', 'en_US');
     headers.append('Authorization', 'Token ' + this.token);
     // headers.append('Origin','https://cors-anywhere.herokuapp.com');
-    headers.append('Origin','http://localhost:8100');
+    // headers.append('Origin','http://localhost:8100');
     let options = new RequestOptions({ headers: headers });
     // let url = "https://cors-anywhere.herokuapp.com/https://api.uber.com/v1.2/estimates/price?start_latitude="+userlat+"&start_longitude="+userlong+"&end_latitude="+collegelat+"&end_longitude="+collegeLong;
     let url = "https://api.uber.com/v1.2/estimates/price?start_latitude="+userlat+"&start_longitude="+userlong+"&end_latitude="+collegelat+"&end_longitude="+collegeLong;
