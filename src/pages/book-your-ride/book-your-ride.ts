@@ -9,9 +9,9 @@ declare var google:any;
   templateUrl: 'book-your-ride.html',
 })
 export class BookYourRidePage {
-  @ViewChild('search') yourlocation : ElementRef;
+  @ViewChild('search', {read: ElementRef}) yourlocation : ElementRef;
   @ViewChild('infocontent') infodisplay : ElementRef;
-  @ViewChild('map') mymap : ElementRef;
+  @ViewChild('map') mapRef : ElementRef;
   map:any;
   resp:any;
   chomudetails:any;
@@ -34,7 +34,10 @@ export class BookYourRidePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad BookYourRidePage');
     this.skochvoting();
-    this.autoComplete();
+    console.log(this.yourlocation);
+    // this.autoComplete();
+    console.log(this.mapRef);
+    
   }
   getUserLatLong(){
     this.geolocation.getCurrentPosition().then((resp) => {
@@ -100,7 +103,7 @@ export class BookYourRidePage {
       center: location,
       zoom : 10
     }
-    this.map = new google.maps.Map(this.mymap.nativeElement, options);
+    this.map = new google.maps.Map(this.mapRef.nativeElement, options);
     let autocomplete = new google.maps.places.Autocomplete(this.yourlocation);
     let infowindow = new google.maps.InfoWindow();    
     infowindow.setContent(this.infodisplay);
