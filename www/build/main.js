@@ -143,11 +143,13 @@ var BookYourRidePage = (function () {
     //   });    
     // }
     BookYourRidePage.prototype.autoComplete = function () {
+        var map;
         var location = new google.maps.LatLng(-33.8688, 151.2195);
-        this.mymap = new google.maps.Map(this.mymap.nativeElement, {
+        var options = {
             center: location,
-            zoom: 13
-        });
+            zoom: 10
+        };
+        this.map = new google.maps.Map(this.mymap.nativeElement, options);
         var autocomplete = new google.maps.places.Autocomplete(this.yourlocation);
         var infowindow = new google.maps.InfoWindow();
         infowindow.setContent(this.infodisplay);

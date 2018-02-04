@@ -12,6 +12,7 @@ export class BookYourRidePage {
   @ViewChild('search') yourlocation : ElementRef;
   @ViewChild('infocontent') infodisplay : ElementRef;
   @ViewChild('map') mymap : ElementRef;
+  map:any;
   resp:any;
   chomudetails:any;
   uber:any;
@@ -93,11 +94,13 @@ export class BookYourRidePage {
   //   });    
   // }
   autoComplete(){
+    let map:any;
     let location = new google.maps.LatLng( -33.8688, 151.2195);
-    this.mymap = new google.maps.Map(this.mymap.nativeElement, {
-      center:location,
-      zoom: 13
-    });
+    let options = {
+      center: location,
+      zoom : 10
+    }
+    this.map = new google.maps.Map(this.mymap.nativeElement, options);
     let autocomplete = new google.maps.places.Autocomplete(this.yourlocation);
     let infowindow = new google.maps.InfoWindow();    
     infowindow.setContent(this.infodisplay);
