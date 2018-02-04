@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChildren, ElementRef } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { OlaCabBookingProvider } from '../../providers/ola-cab-booking/ola-cab-booking';
 import { Geolocation } from '@ionic-native/geolocation';
@@ -8,10 +8,11 @@ declare var google:any;
   selector: 'page-book-your-ride',
   templateUrl: 'book-your-ride.html',
 })
-export class BookYourRidePage {
-  @ViewChild('search', {read: ElementRef}) yourlocation : ElementRef;
-  @ViewChild('infocontent') infodisplay : ElementRef;
-  @ViewChild('map') mapRef : ElementRef;
+export class BookYourRidePage{
+  @ViewChildren('map')  mapRef : ElementRef;
+  @ViewChildren('search') yourlocation : ElementRef;
+  @ViewChildren('infocontent') infodisplay : ElementRef;
+  
   map:any;
   resp:any;
   chomudetails:any;
@@ -35,9 +36,7 @@ export class BookYourRidePage {
     console.log('ionViewDidLoad BookYourRidePage');
     this.skochvoting();
     console.log(this.yourlocation);
-    // this.autoComplete();
-    console.log(this.mapRef);
-    
+    this.autoComplete();   
   }
   getUserLatLong(){
     this.geolocation.getCurrentPosition().then((resp) => {
@@ -97,15 +96,16 @@ export class BookYourRidePage {
   //   });    
   // }
   autoComplete(){
-    let map:any;
-    let location = new google.maps.LatLng( -33.8688, 151.2195);
+    let location = new google.maps.LatLng(-33.8688, 151.2195);
     let options = {
       center: location,
-      zoom : 10
-    }
-    this.map = new google.maps.Map(this.mapRef.nativeElement, options);
-    let autocomplete = new google.maps.places.Autocomplete(this.yourlocation);
-    let infowindow = new google.maps.InfoWindow();    
-    infowindow.setContent(this.infodisplay);
+      zoom : 13
+    }    
+    
+    this.map = new google.maps.Map(this.mapRef.nativeElement, options);   
+    
+    // let autocomplete = new google.maps.places.Autocomplete(this.yourlocation);
+    // let infowindow = new google.maps.InfoWindow();    
+    // infowindow.setContent(this.infodisplay);
   }
 }

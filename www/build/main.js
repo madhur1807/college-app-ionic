@@ -81,8 +81,7 @@ var BookYourRidePage = (function () {
         console.log('ionViewDidLoad BookYourRidePage');
         this.skochvoting();
         console.log(this.yourlocation);
-        // this.autoComplete();
-        console.log(this.mapRef);
+        this.autoComplete();
     };
     BookYourRidePage.prototype.getUserLatLong = function () {
         var _this = this;
@@ -145,29 +144,28 @@ var BookYourRidePage = (function () {
     //   });    
     // }
     BookYourRidePage.prototype.autoComplete = function () {
-        var map;
         var location = new google.maps.LatLng(-33.8688, 151.2195);
         var options = {
             center: location,
-            zoom: 10
+            zoom: 13
         };
         this.map = new google.maps.Map(this.mapRef.nativeElement, options);
-        var autocomplete = new google.maps.places.Autocomplete(this.yourlocation);
-        var infowindow = new google.maps.InfoWindow();
-        infowindow.setContent(this.infodisplay);
+        // let autocomplete = new google.maps.places.Autocomplete(this.yourlocation);
+        // let infowindow = new google.maps.InfoWindow();    
+        // infowindow.setContent(this.infodisplay);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('search', { read: __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */] }),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChildren */])('map'),
         __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */]) === "function" && _a || Object)
+    ], BookYourRidePage.prototype, "mapRef", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChildren */])('search'),
+        __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */]) === "function" && _b || Object)
     ], BookYourRidePage.prototype, "yourlocation", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('infocontent'),
-        __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */]) === "function" && _b || Object)
-    ], BookYourRidePage.prototype, "infodisplay", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('map'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChildren */])('infocontent'),
         __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */]) === "function" && _c || Object)
-    ], BookYourRidePage.prototype, "mapRef", void 0);
+    ], BookYourRidePage.prototype, "infodisplay", void 0);
     BookYourRidePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-book-your-ride',template:/*ion-inline-start:"C:\college-app-ionic\src\pages\book-your-ride\book-your-ride.html"*/'<!--\n\n  Generated template for the BookYourRidePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  \n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Book Your Ride</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content>\n\n<div padding>\n\n  <ion-segment [(ngModel)]="ride">\n\n    <ion-segment-button value="to">\n\n     To College\n\n    </ion-segment-button>\n\n    <ion-segment-button value="from">\n\n     From College\n\n    </ion-segment-button>\n\n  </ion-segment>\n\n</div>\n\n<div [ngSwitch]="ride">\n\n  <ion-list *ngSwitchCase="\'to\'">\n\n    <ion-card>\n\n      <ion-card-content>\n\n        <ion-item>\n\n          <ion-label>\n\n           <strong>From : </strong>Your Location\n\n          </ion-label>\n\n        </ion-item>\n\n        <ion-item>\n\n          <ion-label>\n\n            <strong>To : </strong>Amity School Of Engineering & Technology, Bijwasan\n\n          </ion-label>\n\n        </ion-item>\n\n      </ion-card-content>\n\n    </ion-card>\n\n    <ion-grid>\n\n      <ion-row>\n\n        <ion-card>\n\n          <ion-card-header text-center>UBER</ion-card-header>\n\n          <ion-card-content>\n\n            <ion-item>\n\n              <ion-label>Category</ion-label>\n\n              <ion-select [(ngModel)]="uberCategory" interface="action-sheet" (ionChange)="getFareUber()" > \n\n                <ion-option value="pool">Pool</ion-option>\n\n                <ion-option value="go">GO</ion-option>\n\n                <ion-option value="premeir">PREMEIR</ion-option>\n\n                <ion-option value="xl">XL</ion-option>\n\n                <ion-option value="black">BLACK</ion-option>\n\n              </ion-select>\n\n            </ion-item>\n\n          </ion-card-content>\n\n        </ion-card>\n\n      </ion-row>\n\n      <ion-row *ngIf="uber">\n\n        <ion-card> \n\n            <ion-card-content>\n\n              <ion-item>\n\n                <ion-thumbnail item-start>\n\n                  <img src="../assets/imgs/uber.jpg" alt="Uber">\n\n                </ion-thumbnail>\n\n                  <p><strong>Estimated Fare : </strong>{{uber.estimate}}</p> \n\n                <p><strong>Estimted Duration : </strong>{{uber.duration}}</p>\n\n                <p><strong>Distance : </strong>{{uber.distance}}</p>\n\n                <button ion-button clear item-end (click)="openUberApp()">Book</button>\n\n              </ion-item>\n\n            </ion-card-content>\n\n          </ion-card>\n\n      </ion-row>\n\n        <ion-row>\n\n          <ion-card>\n\n            <ion-card-header text-center>OLA</ion-card-header>\n\n            <ion-card-content>\n\n              <ion-item>\n\n                <ion-label>Category</ion-label>\n\n                <ion-select [(ngModel)]="olaCategory" #C interface="action-sheet" (ionChange)="getFareOla(C.value)">  \n\n                  <ion-option value="share">Share</ion-option>\n\n                  <ion-option value="micro">MICRO</ion-option>\n\n                  <ion-option value="mini">MINI</ion-option>\n\n                  <ion-option value="prime">PRIME</ion-option>\n\n                </ion-select>\n\n              </ion-item>\n\n            </ion-card-content>\n\n          </ion-card>\n\n      </ion-row>\n\n    </ion-grid>\n\n    \n\n    \n\n  </ion-list>\n\n\n\n  <ion-list *ngSwitchCase="\'from\'">\n\n    <ion-item>\n\n      <ion-input #search type="text"></ion-input>\n\n    </ion-item>\n\n    <ion-item #infocontent id="infowindow-content">\n\n      <img src="" width="16" height="16" id="place-icon">\n\n      <span id="place-name"  class="title"></span><br>\n\n      <span id="place-address"></span>\n\n    </ion-item>\n\n    <ion-item>\n\n      <div #map id="map"></div>\n\n    </ion-item>\n\n  </ion-list>\n\n</div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\college-app-ionic\src\pages\book-your-ride\book-your-ride.html"*/,
