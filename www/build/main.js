@@ -32,6 +32,9 @@ var BookYourRidePage = (function () {
         this.collegeLong = '77.0567556';
         this.getUserLatLong();
     }
+    BookYourRidePage.prototype.get_instance = function () {
+        return this;
+    };
     BookYourRidePage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad BookYourRidePage');
         this.skochvoting();
@@ -98,6 +101,7 @@ var BookYourRidePage = (function () {
     // }
     BookYourRidePage.prototype.autoComplete = function () {
         var _this = this;
+        var gmap = this.map;
         var autocomplete;
         var lat = -33.8688;
         var long = 151.2195;
@@ -108,6 +112,7 @@ var BookYourRidePage = (function () {
         };
         setTimeout(function () {
             _this.map = new google.maps.Map(_this.mapRef.nativeElement, options);
+            gmap = _this.map;
             _this.addMarker(location, _this.map);
         }, 1000);
         setTimeout(function () {
@@ -126,12 +131,24 @@ var BookYourRidePage = (function () {
                 }
                 // If the place has a geometry, then present it on a map.
                 if (place.geometry.viewport) {
-                    console.log("here");
-                    this.map.fitBounds(place.geometry.viewport);
+                    gmap.fitBounds(place.geometry.viewport);
+                    return new google.maps.Marker({
+                        map: gmap,
+                        position: place.geometry.location,
+                        title: "You are here!"
+                    });
+                    gmap.setZoom(15);
                 }
                 else {
-                    this.map.setCenter(place.geometry.location);
-                    this.map.setZoom(17); // Why 17? Because it looks good.
+                    console.log(place.geometry.location);
+                    gmap.setCenter(place.geometry.location);
+                    gmap.setZoom(15); // Why 17? Because it looks good.
+                    return new google.maps.Marker({
+                        map: gmap,
+                        position: place.geometry.location,
+                        title: "You are here!"
+                    });
+                    // addMarker(place.geometry.location, gmap);
                 }
                 // marker.setPosition(place.geometry.location);
                 // marker.setVisible(true);

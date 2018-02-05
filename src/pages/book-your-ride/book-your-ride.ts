@@ -4,13 +4,13 @@ import { OlaCabBookingProvider } from '../../providers/ola-cab-booking/ola-cab-b
 import { Geolocation } from '@ionic-native/geolocation';
 // import { QueryList } from '@angular/core/src/linker/query_list';
 declare var google:any;
+
 @IonicPage()
 @Component({
   selector: 'page-book-your-ride',
   templateUrl: 'book-your-ride.html',
 })
 export class BookYourRidePage { 
-  // @ViewChildren('map', { read: ElementRef })  mapRef :ElementRef;
   @ViewChild('map') mapRef : ElementRef;
   @ViewChild('search') yourlocation : ElementRef;
   @ViewChild('infocontent') infodisplay : ElementRef;
@@ -33,6 +33,10 @@ export class BookYourRidePage {
   selectedOlaCategory:any;
   constructor(public navCtrl: NavController, public navParams: NavParams, private olaBooking : OlaCabBookingProvider, private geolocation : Geolocation) {
     this.getUserLatLong();
+  }
+
+  get_instance(){
+    return this;
   }
 
   ionViewDidLoad() {
@@ -98,6 +102,7 @@ export class BookYourRidePage {
   // }
   
   autoComplete(){
+    var gmap = this.map;
     var autocomplete;
     let lat = -33.8688;
     let long =  151.2195;
@@ -107,7 +112,8 @@ export class BookYourRidePage {
       zoom : 13
     }    
     setTimeout( ()=>{ 
-      this.map = new google.maps.Map(this.mapRef.nativeElement, options);      
+      this.map = new google.maps.Map(this.mapRef.nativeElement, options);
+      gmap = this.map;
       this.addMarker(location, this.map);},1000);
     setTimeout( ()=>{ 
       autocomplete = new google.maps.places.Autocomplete(this.yourlocation.nativeElement);
@@ -126,11 +132,23 @@ export class BookYourRidePage {
 
         // If the place has a geometry, then present it on a map.
         if (place.geometry.viewport) {
-          console.log("here");
-          this.map.fitBounds(place.geometry.viewport);
+          gmap.fitBounds(place.geometry.viewport);
+          return new google.maps.Marker({
+            map:gmap,
+            position:place.geometry.location,
+            title:"You are here!"
+          });
+          gmap.setZoom(15);
         } else {
-          this.map.setCenter(place.geometry.location);
-          this.map.setZoom(17);  // Why 17? Because it looks good.
+          console.log(place.geometry.location);
+          gmap.setCenter(place.geometry.location);
+          gmap.setZoom(15);  // Why 17? Because it looks good.
+          return new google.maps.Marker({
+            map:gmap,
+            position:place.geometry.location,
+            title:"You are here!"
+          });
+          // addMarker(place.geometry.location, gmap);
         }
         // marker.setPosition(place.geometry.location);
         // marker.setVisible(true);
