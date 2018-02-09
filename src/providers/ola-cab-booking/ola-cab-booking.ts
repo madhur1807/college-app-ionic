@@ -42,5 +42,9 @@ export class OlaCabBookingProvider {
   //   return this.http.get(url, options)
   //     .map(response => response.json());
   // }
-  
+  getFromCordinates(userAddress){
+    let url = "https://maps.googleapis.com/maps/api/geocode/json?address="+userAddress+"&key=AIzaSyDDWWUrScOOz9XiVe_NVYvsp5K1UO51DCI";
+    return this.http.get(url)
+      .map(response => response.json());
+  }
 }

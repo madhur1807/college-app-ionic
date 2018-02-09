@@ -1,13 +1,27 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
-INJECTED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
-INJECTED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
-INJECTED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
+ADDED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:2:1-18:12
+INJECTED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:2:1-18:12
+INJECTED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:2:1-18:12
+INJECTED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.android.gms:play-services-location:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-location-11.8.0.aar\78b6e1da7a2d27d62f91f23fa4c9f7aa\AndroidManifest.xml:2:1-9:12
 MERGED from [:CordovaLib] C:\college-app-ionic\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:20:1-27:12
-INJECTED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
-INJECTED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
-INJECTED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:2:1-17:12
+MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\ffb153c709e08b051d01e9a4aed0ccc6\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\d28e0581fed8f4cc18735c69e2a703ae\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\b4bf5753b38c17b9c87c1f4bf814208b\AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-location-license:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-location-license-11.8.0.aar\66c3c685c18d9e8f813cc66005c8ade4\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\dcda6328528d439daba2c7974f08b14a\AndroidManifest.xml:2:1-6:12
+MERGED from [com.android.support:support-v4:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-v4-25.2.0.aar\28b27ca61d8ed0bca9900decce079aee\AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\41683d207d2be49f669f269a5399c574\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\85a33fd90ace6b5ad4a1c94e22930385\AndroidManifest.xml:2:1-6:12
+MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-fragment-25.2.0.aar\7c3e44fcd722400f2ed2d1203b5c10b6\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.2.0.aar\c2f447089e220357b9644d358436aa7f\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.2.0.aar\e5dbd681160c62ead198bda0119b13af\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.2.0.aar\b2b1cdf40fc294928e86a967678aafeb\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-compat:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-compat-25.2.0.aar\a8aa372ce39ebcbaf8fe15178539e24c\AndroidManifest.xml:17:1-27:12
+INJECTED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:2:1-18:12
+INJECTED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:2:1-18:12
+INJECTED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:2:1-18:12
 	package
 		ADDED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:2:98-124
 		INJECTED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml
@@ -44,6 +58,34 @@ ADDED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.x
 		ADDED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:4:22-64
 application
 ADDED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:5:5-12:19
+MERGED from [com.google.android.gms:play-services-location:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-location-11.8.0.aar\78b6e1da7a2d27d62f91f23fa4c9f7aa\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-location-11.8.0.aar\78b6e1da7a2d27d62f91f23fa4c9f7aa\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\ffb153c709e08b051d01e9a4aed0ccc6\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\ffb153c709e08b051d01e9a4aed0ccc6\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\d28e0581fed8f4cc18735c69e2a703ae\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\d28e0581fed8f4cc18735c69e2a703ae\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\b4bf5753b38c17b9c87c1f4bf814208b\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\b4bf5753b38c17b9c87c1f4bf814208b\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-location-license:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-location-license-11.8.0.aar\66c3c685c18d9e8f813cc66005c8ade4\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-location-license:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-location-license-11.8.0.aar\66c3c685c18d9e8f813cc66005c8ade4\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\dcda6328528d439daba2c7974f08b14a\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\dcda6328528d439daba2c7974f08b14a\AndroidManifest.xml:5:5-20
+MERGED from [com.android.support:support-v4:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-v4-25.2.0.aar\28b27ca61d8ed0bca9900decce079aee\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-v4-25.2.0.aar\28b27ca61d8ed0bca9900decce079aee\AndroidManifest.xml:25:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\41683d207d2be49f669f269a5399c574\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\41683d207d2be49f669f269a5399c574\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\85a33fd90ace6b5ad4a1c94e22930385\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\85a33fd90ace6b5ad4a1c94e22930385\AndroidManifest.xml:5:5-20
+MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-fragment-25.2.0.aar\7c3e44fcd722400f2ed2d1203b5c10b6\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-fragment-25.2.0.aar\7c3e44fcd722400f2ed2d1203b5c10b6\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.2.0.aar\c2f447089e220357b9644d358436aa7f\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.2.0.aar\c2f447089e220357b9644d358436aa7f\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.2.0.aar\e5dbd681160c62ead198bda0119b13af\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.2.0.aar\e5dbd681160c62ead198bda0119b13af\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.2.0.aar\b2b1cdf40fc294928e86a967678aafeb\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.2.0.aar\b2b1cdf40fc294928e86a967678aafeb\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-compat-25.2.0.aar\a8aa372ce39ebcbaf8fe15178539e24c\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-compat-25.2.0.aar\a8aa372ce39ebcbaf8fe15178539e24c\AndroidManifest.xml:25:5-20
 	android:supportsRtl
 		ADDED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:5:114-140
 	android:label
@@ -80,8 +122,38 @@ ADDED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.x
 		ADDED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:9:27-74
 uses-sdk
 ADDED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:13:5-74
+MERGED from [com.google.android.gms:play-services-location:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-location-11.8.0.aar\78b6e1da7a2d27d62f91f23fa4c9f7aa\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-location-11.8.0.aar\78b6e1da7a2d27d62f91f23fa4c9f7aa\AndroidManifest.xml:5:5-44
 MERGED from [:CordovaLib] C:\college-app-ionic\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:25:5-44
 MERGED from [:CordovaLib] C:\college-app-ionic\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:25:5-44
+MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\ffb153c709e08b051d01e9a4aed0ccc6\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\ffb153c709e08b051d01e9a4aed0ccc6\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\d28e0581fed8f4cc18735c69e2a703ae\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\d28e0581fed8f4cc18735c69e2a703ae\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\b4bf5753b38c17b9c87c1f4bf814208b\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\b4bf5753b38c17b9c87c1f4bf814208b\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-location-license:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-location-license-11.8.0.aar\66c3c685c18d9e8f813cc66005c8ade4\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-location-license:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-location-license-11.8.0.aar\66c3c685c18d9e8f813cc66005c8ade4\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\dcda6328528d439daba2c7974f08b14a\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\dcda6328528d439daba2c7974f08b14a\AndroidManifest.xml:4:5-43
+MERGED from [com.android.support:support-v4:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-v4-25.2.0.aar\28b27ca61d8ed0bca9900decce079aee\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-v4-25.2.0.aar\28b27ca61d8ed0bca9900decce079aee\AndroidManifest.xml:21:5-23:54
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\41683d207d2be49f669f269a5399c574\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\41683d207d2be49f669f269a5399c574\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\85a33fd90ace6b5ad4a1c94e22930385\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\85a33fd90ace6b5ad4a1c94e22930385\AndroidManifest.xml:4:5-43
+MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-fragment-25.2.0.aar\7c3e44fcd722400f2ed2d1203b5c10b6\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-fragment-25.2.0.aar\7c3e44fcd722400f2ed2d1203b5c10b6\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.2.0.aar\c2f447089e220357b9644d358436aa7f\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.2.0.aar\c2f447089e220357b9644d358436aa7f\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.2.0.aar\e5dbd681160c62ead198bda0119b13af\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.2.0.aar\e5dbd681160c62ead198bda0119b13af\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.2.0.aar\b2b1cdf40fc294928e86a967678aafeb\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.2.0.aar\b2b1cdf40fc294928e86a967678aafeb\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-compat-25.2.0.aar\a8aa372ce39ebcbaf8fe15178539e24c\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-compat-25.2.0.aar\a8aa372ce39ebcbaf8fe15178539e24c\AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v4:25.2.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\support-v4-25.2.0.aar\28b27ca61d8ed0bca9900decce079aee\AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
 		ADDED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:13:42-71
 	android:minSdkVersion
@@ -94,7 +166,25 @@ uses-permission#android.permission.ACCESS_FINE_LOCATION
 ADDED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:15:5-79
 	android:name
 		ADDED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:15:22-76
-uses-feature#android.hardware.location.gps
-ADDED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:16:5-66
+uses-permission#android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
+ADDED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:16:5-89
 	android:name
-		ADDED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:16:19-63
+		ADDED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:16:22-86
+uses-feature#android.hardware.location.gps
+ADDED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:17:5-66
+	android:name
+		ADDED from C:\college-app-ionic\platforms\android\app\src\main\AndroidManifest.xml:17:19-63
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\ffb153c709e08b051d01e9a4aed0ccc6\AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\ffb153c709e08b051d01e9a4aed0ccc6\AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\ffb153c709e08b051d01e9a4aed0ccc6\AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\ffb153c709e08b051d01e9a4aed0ccc6\AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\b4bf5753b38c17b9c87c1f4bf814208b\AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\b4bf5753b38c17b9c87c1f4bf814208b\AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Dell\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\b4bf5753b38c17b9c87c1f4bf814208b\AndroidManifest.xml:24:13-58

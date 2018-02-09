@@ -6,12 +6,20 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LocationPage } from '../pages/location/location';
+import { TimeTablePage } from '../pages/time-table/time-table';
 import { DevelopersPage } from '../pages/developers/developers';
+import { SyllabusPage } from '../pages/syllabus/syllabus';
 import {  BookYourRidePage } from '../pages/book-your-ride/book-your-ride';
 import { StatusBar } from '@ionic-native/status-bar';
+import { ModalPage } from '../pages/modal/modal';
+import { Modal2Page } from '../pages/modal2/modal2'; 
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { OlaCabBookingProvider } from '../providers/ola-cab-booking/ola-cab-booking';
-
+import { IonicStorageModule } from '@ionic/storage';
+import { IonicImageViewerModule } from 'ionic-img-viewer';
+import { Geolocation } from '@ionic-native/geolocation';
+import { LocationAccuracy } from '@ionic-native/location-accuracy';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 @NgModule({
   declarations: [
     MyApp,
@@ -19,12 +27,18 @@ import { OlaCabBookingProvider } from '../providers/ola-cab-booking/ola-cab-book
     ListPage,
     DevelopersPage,
     LocationPage,
-    BookYourRidePage
+    BookYourRidePage,
+    TimeTablePage,
+    ModalPage,
+    SyllabusPage,
+    Modal2Page
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule
+    HttpModule,
+    IonicStorageModule.forRoot(),
+    IonicImageViewerModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -33,14 +47,20 @@ import { OlaCabBookingProvider } from '../providers/ola-cab-booking/ola-cab-book
     ListPage,
     DevelopersPage,
     LocationPage,
-    BookYourRidePage
-    
+    BookYourRidePage,
+    TimeTablePage,
+    ModalPage,
+    SyllabusPage,
+    Modal2Page
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    OlaCabBookingProvider
+    OlaCabBookingProvider,
+    Geolocation,
+    LocationAccuracy,
+    InAppBrowser
   ]
 })
 export class AppModule {}

@@ -6,9 +6,12 @@ import { DevelopersPage } from '../pages/developers/developers';
 import { LocationPage } from '../pages/location/location';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
-import {  BookYourRidePage } from '../pages/book-your-ride/book-your-ride';
+import { TimeTablePage } from '../pages/time-table/time-table';
+import { BookYourRidePage } from '../pages/book-your-ride/book-your-ride';
+import { SyllabusPage } from '../pages/syllabus/syllabus';
 import { OlaCabBookingProvider } from '../providers/ola-cab-booking/ola-cab-booking';
 import { Geolocation } from '@ionic-native/geolocation';
+
 @Component({
   templateUrl: 'app.html',
   providers : [OlaCabBookingProvider, Geolocation]
@@ -27,9 +30,11 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
+      { title: 'Time-Table' , component : TimeTablePage},
+      { title: 'Syllabus', component: SyllabusPage }, 
       { title: 'Location', component: LocationPage },
       { title: 'Book Your Ride', component: BookYourRidePage },
-      { title: 'Developers', component: DevelopersPage }
+      { title: 'Developers', component: DevelopersPage }       
     ];
 
   }

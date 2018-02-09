@@ -3,15 +3,12 @@ page-book-your-ride {
         font-weight: bold;
       }
 
-      #infowindow-content {
+    #infowindow-content {
         display: block;
-      }
+    }
 
-    //   #map #infowindow-content {
-    //     display: inline;
-    //   }
     #map{
-        height: 500px;
+        height: 250px;
         width: 100%;
     }
     #placeInput{
@@ -23,6 +20,26 @@ page-book-your-ride {
     border-top: 1px solid #ddd;
 }
 .item-md ion-thumbnail ion-img, .item-md ion-thumbnail img{
-    width:90px;
-    height:auto;
+    width:60px;
+    height:auto; 
+    margin-top: 15px;
+}
+#fromUberLogo {
+    width:60px;
+    height:auto; 
+    margin-top: 15px;
+}
+#setLocation {
+    margin: 0 auto;
+    width: 50%;
+}
+.uberDetailsCard {
+    padding-left : 0px !important;
+}
+.uberDetailsCard ion-thumbnail[item-start]{
+    margin-right: 0% !important;
+    min-width: 70px !important;
+}
+.bookCab {
+    margin-right: 0px !important;
 }

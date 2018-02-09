@@ -18,7 +18,7 @@
 <ion-content>
 <div padding>
   <ion-segment [(ngModel)]="ride">
-    <ion-segment-button value="to">
+    <ion-segment-button value="to" class="segment-activated">
      To College
     </ion-segment-button>
     <ion-segment-button (click)="autoComplete()" value="from">
@@ -49,12 +49,12 @@
           <ion-card-content>
             <ion-item>
               <ion-label>Category</ion-label>
-              <ion-select [(ngModel)]="uberCategory" interface="action-sheet" (ionChange)="getFareUber()" > 
-                <ion-option value="pool">Pool</ion-option>
-                <ion-option value="go">GO</ion-option>
-                <ion-option value="premeir">PREMEIR</ion-option>
-                <ion-option value="xl">XL</ion-option>
-                <ion-option value="black">BLACK</ion-option>
+              <ion-select [(ngModel)]="uberCategory" interface="action-sheet" (ionChange)="showDetailsUber()" [disabled]="disableSelector1">
+                <ion-option value="uberPOOL">POOL</ion-option>
+                <ion-option value="GO">GO</ion-option>
+                <ion-option value="PREMIER">PREMEIR</ion-option>
+                <ion-option value="XL">XL</ion-option>
+                <ion-option value="BLACK">BLACK</ion-option>
               </ion-select>
             </ion-item>
           </ion-card-content>
@@ -63,14 +63,14 @@
       <ion-row *ngIf="uber">
         <ion-card> 
             <ion-card-content>
-              <ion-item>
+              <ion-item class="uberDetailsCard">
                 <ion-thumbnail item-start>
-                  <img src="../assets/imgs/uber.jpg" alt="Uber">
+                  <img src="assets/imgs/uber.jpg" alt="Uber">
                 </ion-thumbnail>
-                  <p><strong>Estimated Fare : </strong>{{uber.estimate}}</p> 
-                <p><strong>Estimted Duration : </strong>{{uber.duration}}</p>
-                <p><strong>Distance : </strong>{{uber.distance}}</p>
-                <button ion-button clear item-end (click)="openUberApp()">Book</button>
+                  <p><strong>Estimated Fare: </strong>{{uber.estimate}}</p> 
+                <p><strong>Estimted Duration: </strong>{{uber.duration/60}}min</p>
+                <p><strong>Distance: </strong>{{uber.distance}}km</p>
+                <button ion-button clear item-end (click)="openUberApp()" class="bookCab">Book</button>
               </ion-item>
             </ion-card-content>
           </ion-card>
@@ -103,11 +103,43 @@
       </ion-label>
     </ion-item>
     <ion-item>
-        <input type="text" #search id="placeInput"/>
+        <input type="text" #search id="placeInput" [(ngModel)]="yourlocationvalue"/>
     </ion-item>      
     <ion-item>
       <div #map id="map"></div>
     </ion-item>
+    <br/>
+    <button ion-button id="setLocation" block (click)="getMarkerLocation()">Set Location</button>
+    <ion-card (click)="disabledOption();">
+      <ion-card-header text-center>UBER</ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label>Category</ion-label>
+          <ion-select [(ngModel)]="uberFromCategory" interface="action-sheet"  (ionChange)="uberfareFrom()" [disabled]="disableSelector"> 
+            <ion-option value="uberPOOL">POOL</ion-option>
+            <ion-option value="GO">GO</ion-option>
+            <ion-option value="PREMIER">PREMEIR</ion-option>
+            <ion-option value="XL">XL</ion-option>
+            <ion-option value="BLACK">BLACK</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+    <ion-row *ngIf="uberFrom">
+        <ion-card> 
+          <ion-card-content>
+            <ion-item class="uberDetailsCard">
+              <ion-thumbnail item-start>
+                <img src="assets/imgs/uber.jpg" alt="Uber" id="fromUberLogo">
+              </ion-thumbnail>
+              <p><strong>Estimated Fare: </strong>{{uberFrom.estimate}}</p> 
+              <p><strong>Estimted Duration: </strong>{{(uberFrom.duration/60)}}min</p>
+              <p><strong>Distance: </strong>{{uberFrom.distance}}km</p>             
+              <button ion-button clear item-end (click)="openUberAppFrom()" class="bookCab">Book</button>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-row>
   </ion-list>
 </div>
 </ion-content>
