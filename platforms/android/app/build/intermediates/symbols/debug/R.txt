@@ -36,7 +36,10 @@ int drawable common_google_signin_btn_text_light_normal 0x7f030011
 int drawable common_google_signin_btn_text_light_normal_background 0x7f030012
 int drawable googleg_disabled_color_18 0x7f030013
 int drawable googleg_standard_color_18 0x7f030014
-int drawable screen 0x7f030015
+int drawable ic_action_next_item 0x7f030015
+int drawable ic_action_previous_item 0x7f030016
+int drawable ic_action_remove 0x7f030017
+int drawable screen 0x7f030018
 int id adjust_height 0x7f040000
 int id adjust_width 0x7f040001
 int id auto 0x7f040002

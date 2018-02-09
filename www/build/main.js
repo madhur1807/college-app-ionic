@@ -81,51 +81,6 @@ var OlaCabBookingProvider = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DevelopersPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-/**
- * Generated class for the DevelopersPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var DevelopersPage = (function () {
-    function DevelopersPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    DevelopersPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad DevelopersPage');
-    };
-    DevelopersPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-developers',template:/*ion-inline-start:"C:\college-app-ionic\src\pages\developers\developers.html"*/'<!--\n\n  Generated template for the DevelopersPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n      <button ion-button menuToggle>\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n    <ion-title>Developers</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-card>\n\n      <img src="assets/imgs/madhur.jpg" alt="">\n\n      <ion-card-content>\n\n        <ion-card-title>Madhur Mittal</ion-card-title>\n\n        <p>\n\n          Frontend Designer & Developer<br/>\n\n          Reach me at : madhurmittal1807@gmail.com<br/>\n\n          Contact : 9714367388\n\n        </p> \n\n      </ion-card-content>\n\n  </ion-card>  \n\n  <ion-card>\n\n      <img src="assets/imgs/img-2.jpg" alt="">\n\n          <ion-card-content>\n\n            <ion-card-title>Mahesh Pratap</ion-card-title>\n\n            <p>\n\n              Frontend Designer & Developer<br/>\n\n              Reach me at : mp1995singh@gmail.com<br/>\n\n              Contact : 9873088432\n\n            </p>\n\n          </ion-card-content>\n\n  </ion-card>      \n\n  <ion-card>\n\n    <img src="assets/imgs/vijayant.jpg" alt="">\n\n    <ion-card-content>\n\n      <ion-card-title>Vijayant Saini</ion-card-title>\n\n      <p>\n\n        Full Stack Developer<br/>\n\n        Reach me at : vijayant.saini123@gmail.com<br/>\n\n        Contact : 8802553203\n\n      </p>\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-card>\n\n    <ion-card-content>\n\n      <ion-card-title>Working For : ForYou IT Solutions</ion-card-title>\n\n      <p>\n\n        Reach us at : foryouitsolution@gmail.com <br/>\n\n        To know more about us: <br/>\n\n      <a ion-button small href="http://foryouitsolutions.github.io">Click Here</a></p>\n\n    </ion-card-content>\n\n  </ion-card>      \n\n      \n\n</ion-content>\n\n'/*ion-inline-end:"C:\college-app-ionic\src\pages\developers\developers.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavParams */]])
-    ], DevelopersPage);
-    return DevelopersPage;
-}());
-
-//# sourceMappingURL=developers.js.map
-
-/***/ }),
-
-/***/ 130:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BookYourRidePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
@@ -443,15 +398,13 @@ var BookYourRidePage = (function () {
 
 /***/ }),
 
-/***/ 131:
+/***/ 130:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Modal2Page; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DevelopersPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__ = __webpack_require__(192);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -463,50 +416,78 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-
 /**
- * Generated class for the Modal2Page page.
+ * Generated class for the DevelopersPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var Modal2Page = (function () {
-    function Modal2Page(navCtrl, iab, navParams, viewCtrl, storage) {
-        var _this = this;
+var DevelopersPage = (function () {
+    function DevelopersPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
-        this.iab = iab;
         this.navParams = navParams;
-        this.viewCtrl = viewCtrl;
-        this.storage = storage;
-        this.category = "syllabus";
-        this.storage.get("branch").then(function (val) {
-            _this.branch = val;
-            _this.storage.get("year").then(function (val) {
-                _this.year = val;
-            });
-        });
     }
-    Modal2Page.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad Modal2Page');
-        this.showpdf();
+    DevelopersPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad DevelopersPage');
     };
-    Modal2Page.prototype.showpdf = function () {
-        this.iab.create('https://drive.google.com/open?id=1RPL7I6C3TKVsxvUTSZDIbQnuj81cPPzQ');
-    };
-    Modal2Page.prototype.dismiss = function () {
-        this.viewCtrl.dismiss();
-    };
-    Modal2Page = __decorate([
+    DevelopersPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-modal2',template:/*ion-inline-start:"C:\college-app-ionic\src\pages\modal2\modal2.html"*/'<!--\n  Generated template for the Modal2Page page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{year}}, {{branch}}</ion-title>\n    <ion-buttons start>\n      <button ion-button (click)="dismiss()">\n        <span ion-text color="primary" showWhen="ios">Cancel</span>\n        <ion-icon name="md-close" showWhen="android, windows"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <div padding>\n    <ion-segment [(ngModel)]="category">\n      <ion-segment-button value="syllabus">\n        Syllabus\n      </ion-segment-button>\n      <ion-segment-button value="experiments">\n        Experiments\n      </ion-segment-button>\n    </ion-segment>\n  </div>\n  <div [ngSwitch]="category">\n    <ion-list *ngSwitchCase="\'syllabus\'">\n      \n    </ion-list>\n    \n    <ion-list *ngSwitchCase="\'experiments\'">\n        \n    </ion-list>\n  </div>\n</ion-content>\n\n'/*ion-inline-end:"C:\college-app-ionic\src\pages\modal2\modal2.html"*/,
+            selector: 'page-developers',template:/*ion-inline-start:"C:\college-app-ionic\src\pages\developers\developers.html"*/'<!--\n\n  Generated template for the DevelopersPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n      <button ion-button menuToggle>\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n    <ion-title>Developers</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-card>\n\n      <img src="assets/imgs/madhur.jpg" alt="">\n\n      <ion-card-content>\n\n        <ion-card-title>Madhur Mittal</ion-card-title>\n\n        <p>\n\n          Frontend Designer & Developer<br/>\n\n          Reach me at : madhurmittal1807@gmail.com<br/>\n\n          Contact : 9714367388\n\n        </p> \n\n      </ion-card-content>\n\n  </ion-card>  \n\n  <ion-card>\n\n      <img src="assets/imgs/img-2.jpg" alt="">\n\n          <ion-card-content>\n\n            <ion-card-title>Mahesh Pratap</ion-card-title>\n\n            <p>\n\n              Frontend Designer & Developer<br/>\n\n              Reach me at : mp1995singh@gmail.com<br/>\n\n              Contact : 9873088432\n\n            </p>\n\n          </ion-card-content>\n\n  </ion-card>      \n\n  <ion-card>\n\n    <img src="assets/imgs/vijayant.jpg" alt="">\n\n    <ion-card-content>\n\n      <ion-card-title>Vijayant Saini</ion-card-title>\n\n      <p>\n\n        Full Stack Developer<br/>\n\n        Reach me at : vijayant.saini123@gmail.com<br/>\n\n        Contact : 8802553203\n\n      </p>\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-card>\n\n    <ion-card-content>\n\n      <ion-card-title>Working For : ForYou IT Solutions</ion-card-title>\n\n      <p>\n\n        Reach us at : foryouitsolution@gmail.com <br/>\n\n        To know more about us: <br/>\n\n      <a ion-button small href="http://foryouitsolutions.github.io">Click Here</a></p>\n\n    </ion-card-content>\n\n  </ion-card>      \n\n      \n\n</ion-content>\n\n'/*ion-inline-end:"C:\college-app-ionic\src\pages\developers\developers.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__["a" /* InAppBrowser */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["w" /* ViewController */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]])
-    ], Modal2Page);
-    return Modal2Page;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavParams */]])
+    ], DevelopersPage);
+    return DevelopersPage;
 }());
 
-//# sourceMappingURL=modal2.js.map
+//# sourceMappingURL=developers.js.map
+
+/***/ }),
+
+/***/ 131:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LocationPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the LocationPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var LocationPage = (function () {
+    function LocationPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    LocationPage.prototype.ionViewDidLoad = function () {
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('map'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
+    ], LocationPage.prototype, "mapRef", void 0);
+    LocationPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-location',template:/*ion-inline-start:"C:\college-app-ionic\src\pages\location\location.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Location</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <h2>Amity School Of Enginering & Technology</h2>\n\n  <ion-card>\n\n    <ion-card-content>\n\n      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.2627971539637!2d77.05675561446384!3d28.531819695384172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1bcc8a698d51%3A0x77c4732fc0a625d8!2sAmity+School+Of+Engineering+And+Technology!5e0!3m2!1sen!2sin!4v1517221825638" width="330" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-grid>\n\n    <!-- <ion-row>\n\n      <div id="map" #map></div>\n\n    </ion-row> -->\n\n    <ion-row>\n\n      <ion-col width-100>\n\n        <ion-list>\n\n          <ion-item>\n\n            <strong>Contact: </strong>011-28062106\n\n          </ion-item>\n\n          <ion-item>\n\n              <strong>Landmark: </strong>Golok Dham Mandir\n\n          </ion-item>\n\n          <ion-item>\n\n              <strong>Nearest Metro Station: </strong>Dwarka Sec-21\n\n          </ion-item>\n\n        </ion-list>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\college-app-ionic\src\pages\location\location.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavParams */]])
+    ], LocationPage);
+    return LocationPage;
+}());
+
+//# sourceMappingURL=location.js.map
 
 /***/ }),
 
@@ -581,9 +562,10 @@ var ModalPage = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LocationPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TimeTablePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modal_modal__ = __webpack_require__(132);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -595,33 +577,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 /**
- * Generated class for the LocationPage page.
+ * Generated class for the TimeTablePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var LocationPage = (function () {
-    function LocationPage(navCtrl, navParams) {
+var TimeTablePage = (function () {
+    function TimeTablePage(navCtrl, modalCtrl, navParams) {
         this.navCtrl = navCtrl;
+        this.modalCtrl = modalCtrl;
         this.navParams = navParams;
     }
-    LocationPage.prototype.ionViewDidLoad = function () {
+    TimeTablePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad TimeTablePage');
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('map'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
-    ], LocationPage.prototype, "mapRef", void 0);
-    LocationPage = __decorate([
+    TimeTablePage.prototype.openModal = function (characterNum) {
+        var modal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_2__modal_modal__["a" /* ModalPage */], characterNum);
+        modal.present();
+    };
+    TimeTablePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-location',template:/*ion-inline-start:"C:\college-app-ionic\src\pages\location\location.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Location</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <h2>Amity School Of Enginering & Technology</h2>\n\n  <ion-card>\n\n    <ion-card-content>\n\n      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.2627971539637!2d77.05675561446384!3d28.531819695384172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1bcc8a698d51%3A0x77c4732fc0a625d8!2sAmity+School+Of+Engineering+And+Technology!5e0!3m2!1sen!2sin!4v1517221825638" width="330" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-grid>\n\n    <!-- <ion-row>\n\n      <div id="map" #map></div>\n\n    </ion-row> -->\n\n    <ion-row>\n\n      <ion-col width-100>\n\n        <ion-list>\n\n          <ion-item>\n\n            <strong>Contact: </strong>011-28062106\n\n          </ion-item>\n\n          <ion-item>\n\n              <strong>Landmark: </strong>Golok Dham Mandir\n\n          </ion-item>\n\n          <ion-item>\n\n              <strong>Nearest Metro Station: </strong>Dwarka Sec-21\n\n          </ion-item>\n\n        </ion-list>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\college-app-ionic\src\pages\location\location.html"*/,
+            selector: 'page-time-table',template:/*ion-inline-start:"C:\college-app-ionic\src\pages\time-table\time-table.html"*/'<!--\n  Generated template for the TimeTablePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Time-Table</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  \n  <button ion-button block (click)="openModal({charNum: 0});">\n    First Year\n  </button>\n  <button ion-button block (click)="openModal({charNum: 1});">\n    Second Year\n  </button>\n  <button ion-button block (click)="openModal({charNum: 2});">\n    Third Year\n  </button>\n  <button ion-button block (click)="openModal({charNum: 3});">\n    Fourth Year\n  </button>\n\n</ion-content>\n'/*ion-inline-end:"C:\college-app-ionic\src\pages\time-table\time-table.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavParams */]])
-    ], LocationPage);
-    return LocationPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* ModalController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavParams */]])
+    ], TimeTablePage);
+    return TimeTablePage;
 }());
 
-//# sourceMappingURL=location.js.map
+//# sourceMappingURL=time-table.js.map
 
 /***/ }),
 
@@ -629,11 +614,78 @@ var LocationPage = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Modal2Page; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__ = __webpack_require__(192);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/**
+ * Generated class for the Modal2Page page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var Modal2Page = (function () {
+    function Modal2Page(navCtrl, iab, navParams, viewCtrl, storage) {
+        var _this = this;
+        this.navCtrl = navCtrl;
+        this.iab = iab;
+        this.navParams = navParams;
+        this.viewCtrl = viewCtrl;
+        this.storage = storage;
+        this.category = "syllabus";
+        this.storage.get("branch").then(function (val) {
+            _this.branch = val;
+            _this.storage.get("year").then(function (val) {
+                _this.year = val;
+            });
+        });
+    }
+    Modal2Page.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad Modal2Page');
+        this.showpdf();
+    };
+    Modal2Page.prototype.showpdf = function () {
+        this.iab.create('https://drive.google.com/open?id=1RPL7I6C3TKVsxvUTSZDIbQnuj81cPPzQ');
+    };
+    Modal2Page.prototype.dismiss = function () {
+        this.viewCtrl.dismiss();
+    };
+    Modal2Page = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-modal2',template:/*ion-inline-start:"C:\college-app-ionic\src\pages\modal2\modal2.html"*/'<!--\n  Generated template for the Modal2Page page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{year}}, {{branch}}</ion-title>\n    <ion-buttons start>\n      <button ion-button (click)="dismiss()">\n        <span ion-text color="primary" showWhen="ios">Cancel</span>\n        <ion-icon name="md-close" showWhen="android, windows"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <div padding>\n    <ion-segment [(ngModel)]="category">\n      <ion-segment-button value="syllabus">\n        Syllabus\n      </ion-segment-button>\n      <ion-segment-button value="experiments">\n        Experiments\n      </ion-segment-button>\n    </ion-segment>\n  </div>\n  <div [ngSwitch]="category">\n    <ion-list *ngSwitchCase="\'syllabus\'">\n      \n    </ion-list>\n    \n    <ion-list *ngSwitchCase="\'experiments\'">\n        \n    </ion-list>\n  </div>\n</ion-content>\n\n'/*ion-inline-end:"C:\college-app-ionic\src\pages\modal2\modal2.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_in_app_browser__["a" /* InAppBrowser */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["w" /* ViewController */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]])
+    ], Modal2Page);
+    return Modal2Page;
+}());
+
+//# sourceMappingURL=modal2.js.map
+
+/***/ }),
+
+/***/ 135:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SyllabusPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modal2_modal2__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modal2_modal2__ = __webpack_require__(134);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -727,58 +779,6 @@ var SyllabusPage = (function () {
 
 /***/ }),
 
-/***/ 135:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TimeTablePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modal_modal__ = __webpack_require__(132);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-/**
- * Generated class for the TimeTablePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var TimeTablePage = (function () {
-    function TimeTablePage(navCtrl, modalCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.modalCtrl = modalCtrl;
-        this.navParams = navParams;
-    }
-    TimeTablePage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad TimeTablePage');
-    };
-    TimeTablePage.prototype.openModal = function (characterNum) {
-        var modal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_2__modal_modal__["a" /* ModalPage */], characterNum);
-        modal.present();
-    };
-    TimeTablePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-time-table',template:/*ion-inline-start:"C:\college-app-ionic\src\pages\time-table\time-table.html"*/'<!--\n  Generated template for the TimeTablePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Time-Table</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  \n  <button ion-button block (click)="openModal({charNum: 0});">\n    First Year\n  </button>\n  <button ion-button block (click)="openModal({charNum: 1});">\n    Second Year\n  </button>\n  <button ion-button block (click)="openModal({charNum: 2});">\n    Third Year\n  </button>\n  <button ion-button block (click)="openModal({charNum: 3});">\n    Fourth Year\n  </button>\n\n</ion-content>\n'/*ion-inline-end:"C:\college-app-ionic\src\pages\time-table\time-table.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* ModalController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavParams */]])
-    ], TimeTablePage);
-    return TimeTablePage;
-}());
-
-//# sourceMappingURL=time-table.js.map
-
-/***/ }),
-
 /***/ 145:
 /***/ (function(module, exports) {
 
@@ -801,15 +801,15 @@ webpackEmptyAsyncContext.id = 145;
 
 var map = {
 	"../pages/book-your-ride/book-your-ride.module": [
-		425,
+		424,
 		6
 	],
 	"../pages/developers/developers.module": [
-		424,
+		425,
 		5
 	],
 	"../pages/location/location.module": [
-		428,
+		426,
 		4
 	],
 	"../pages/modal/modal.module": [
@@ -817,15 +817,15 @@ var map = {
 		2
 	],
 	"../pages/modal2/modal2.module": [
-		426,
+		429,
 		3
 	],
 	"../pages/syllabus/syllabus.module": [
-		429,
+		430,
 		1
 	],
 	"../pages/time-table/time-table.module": [
-		430,
+		428,
 		0
 	]
 };
@@ -963,14 +963,14 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(318);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_home_home__ = __webpack_require__(235);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_list_list__ = __webpack_require__(236);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_location_location__ = __webpack_require__(133);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_time_table_time_table__ = __webpack_require__(135);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_developers_developers__ = __webpack_require__(129);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_syllabus_syllabus__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_book_your_ride_book_your_ride__ = __webpack_require__(130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_location_location__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_time_table_time_table__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_developers_developers__ = __webpack_require__(130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_syllabus_syllabus__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_book_your_ride_book_your_ride__ = __webpack_require__(129);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_status_bar__ = __webpack_require__(233);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_modal_modal__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_modal2_modal2__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_modal2_modal2__ = __webpack_require__(134);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ionic_native_splash_screen__ = __webpack_require__(234);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_ola_cab_booking_ola_cab_booking__ = __webpack_require__(100);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_storage__ = __webpack_require__(60);
@@ -1027,13 +1027,13 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["m" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/developers/developers.module#DevelopersPageModule', name: 'DevelopersPage', segment: 'developers', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/book-your-ride/book-your-ride.module#BookYourRidePageModule', name: 'BookYourRidePage', segment: 'book-your-ride', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/modal2/modal2.module#Modal2PageModule', name: 'Modal2Page', segment: 'modal2', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/modal/modal.module#ModalPageModule', name: 'ModalPage', segment: 'modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/developers/developers.module#DevelopersPageModule', name: 'DevelopersPage', segment: 'developers', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/location/location.module#LocationPageModule', name: 'LocationPage', segment: 'location', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/syllabus/syllabus.module#SyllabusPageModule', name: 'SyllabusPage', segment: 'syllabus', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/time-table/time-table.module#TimeTablePageModule', name: 'TimeTablePage', segment: 'time-table', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/modal/modal.module#ModalPageModule', name: 'ModalPage', segment: 'modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/time-table/time-table.module#TimeTablePageModule', name: 'TimeTablePage', segment: 'time-table', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/modal2/modal2.module#Modal2PageModule', name: 'Modal2Page', segment: 'modal2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/syllabus/syllabus.module#SyllabusPageModule', name: 'SyllabusPage', segment: 'syllabus', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_3__angular_http__["c" /* HttpModule */],
@@ -1080,13 +1080,13 @@ var AppModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(233);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(234);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_developers_developers__ = __webpack_require__(129);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_location_location__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_developers_developers__ = __webpack_require__(130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_location_location__ = __webpack_require__(131);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(235);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_list_list__ = __webpack_require__(236);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_time_table_time_table__ = __webpack_require__(135);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_book_your_ride_book_your_ride__ = __webpack_require__(130);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_syllabus_syllabus__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_time_table_time_table__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_book_your_ride_book_your_ride__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_syllabus_syllabus__ = __webpack_require__(135);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_ola_cab_booking_ola_cab_booking__ = __webpack_require__(100);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_geolocation__ = __webpack_require__(101);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
